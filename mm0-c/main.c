@@ -60,5 +60,9 @@ int main(int argc, char** argv) {
   // clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end_time);
   // long diffInNanos = (end_time.tv_sec - start_time.tv_sec) * (long)1e9 + (end_time.tv_nsec - start_time.tv_nsec);
   // printf("%ld", diffInNanos);
+
+  munmap(result, len);
+  close(fd);
+
   return 0;
 }
